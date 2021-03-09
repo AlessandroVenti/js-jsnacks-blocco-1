@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+      /* .titolo {
+        text-align: center;
+        color: red;
+      } */
+
+      #lol {
+        color: red;
+      }
+
+      #lol2 {
+        color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1 class="titolo" id = "lol"> Ciao Mondo</h1>
+    <h1 class="titolo" id="lol2"> Lorem Ipsum</h1>
+
+    <script type="text/javascript">
+
+        // Generatore di "nomi cognomi" casuali: prendendo una 
+        // lista di nomi e una lista di cognomi, Gatsby vuole 
+        // generare una falsa lista di invitati.
+
+        var names = ['Alessandro', 'Martino', 'Tiziana', 'Lorenzo', 'Gabriele'];
+        var lastnames = ['Venti', 'Scalvini', 'Baraldi', 'Antonelli', 'Alessi'];  
+        var fullnames = [];
+        var random1;
+        var random2;
+
+        for (var i = 0; i < 5; i++) {
+          random1 = Math.round(Math.random() * (4 - 0) + 0);
+          random2 = Math.round(Math.random() * (4 - 0) + 0);
+          fullnames.push(names[random1] + " " + lastnames[random2]);
+        }
+        console.log(fullnames);
+
+    </script>
+  </body>
+</html>
