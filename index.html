@@ -176,11 +176,11 @@
 
           var studentArray = [
 
-            { 'name' : 'Martino' , 'cognome' : 'Scalvini' },
+            { 'name' : 'Olga' , 'cognome' : 'Demina' },
 
-            { 'name' : 'Alessandro', 'cognome' : 'Venti' },
+            { 'name' : 'Gianluca', 'cognome' : 'Lomarco' },
 
-            {' name' : 'Mattwew' , 'cognome' : 'Battistini' }
+            {' name' : 'Giovanni' , 'cognome' : 'Cappelletti' }
               
           ]
 
@@ -205,9 +205,50 @@
 
         }
 
-        studentArray();
+        // studentArray();
 
 
+
+                                      //Dare la possibilità all'utente attraverso 3 prompt di
+                                      //aggiungere un nuovo oggetto studente inserendo
+                                      //nell'ordine: nome, cognome e età.
+
+
+        
+        function newStudent(nome, cognome, eta) {
+
+
+          var studentArray = [
+
+            { 'name' : 'Olga' , 'cognome' : 'Demina' },
+
+            { 'name' : 'Gianluca', 'cognome' : 'Lomarco' },
+
+            {' name' : 'Giovanni' , 'cognome' : 'Cappelletti' }
+              
+          ]
+
+
+          var newStudent = {
+
+            'name' : nome,
+
+            'lastname' : cognome,
+
+            'age' : eta
+
+          }
+
+
+          console.log(newStudent);
+
+          studentArray.push(newStudent);
+
+          console.log(studentArray);
+
+        }
+
+        newStudent(prompt('Inserisci il nome dello studente'), prompt('Inserisci il nome dello studente'), parseInt(prompt("Inserisci l'eta dello studente")));
         
     </script>
   </body>
