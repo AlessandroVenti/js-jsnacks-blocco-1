@@ -121,6 +121,50 @@
         //     document.getElementById("lol2").innerHTML += " " + numbers[i];
         //   }
         // }  
+
+
+
+                                           // Creare un oggetto che descriva uno studente con le seguenti proprietà: nome, cognome ed età.
+                                        // Stampare a schermo attraverso il for in tutte le proprietà.
+
+                                        
+        function studentSetup() {
+
+
+          document.getElementById('lol').innerHTML = '';
+
+
+          var student = {
+
+
+            'name' : 'Judy',
+
+            'lastname' : 'Alvarez',
+
+            'age' : '29'
+
+
+          }
+
+
+          for ( var element in student) {
+
+
+            var value = student[element];
+
+            document.getElementById('lol').innerHTML += `${element} : ${value} || `;
+
+            console.log(element, value);
+
+
+          }
+
+        }
+        
+        
+        studentSetup();
+
+
         
     </script>
   </body>
