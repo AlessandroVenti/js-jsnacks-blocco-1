@@ -160,9 +160,52 @@
           }
 
         }
+
         
-        
-        studentSetup();
+        // studentSetup();
+
+
+                                    //Creare un array di oggetti di studenti. Ciclare su tutti gli
+                                    //studenti e stampare per ognuno nome e cognome
+
+                      
+        function studentArray() {
+
+          document.getElementById('lol').innerHTML = '';
+
+
+          var studentArray = [
+
+            { 'name' : 'Martino' , 'cognome' : 'Scalvini' },
+
+            { 'name' : 'Alessandro', 'cognome' : 'Venti' },
+
+            {' name' : 'Mattwew' , 'cognome' : 'Battistini' }
+              
+          ]
+
+          console.log(studentArray);
+
+          for ( let i = 0; i < studentArray.length; i++) {
+
+
+            for( var element in studentArray[i]) {
+
+
+              var value = studentArray[i][element];
+
+              document.getElementById('lol').innerHTML += `${element} : ${value} || `;
+
+              console.log(element, value);
+
+
+            }
+
+          }
+
+        }
+
+        studentArray();
 
 
         
