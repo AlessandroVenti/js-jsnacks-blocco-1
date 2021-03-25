@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+
+      /* .titolo {
+        text-align: center;
+        color: red;
+      } */
+
+      #lol {
+        color: red;
+      }
+
+      #lol2 {
+        color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1 class="titolo" id = "lol"> Ciao Mondo</h1>
+    <h1 class="titolo" id="lol2"> Lorem Ipsum</h1>
+
+    <script type="text/javascript">
+
+
+                              // Scrivi una funzione che accetti tre argomenti:
+                              // un array e due numeri ("a" più piccolo di "b" e "b" grande al
+                              // massimo quanto il numero di elementi dell'array).
+                              // La funzione ritornerà un nuovo array con i valori che
+                              // hanno la posizione compresa tra "a" e "b"
+
+
+                         //Versione usando gli indici di posizione come range min e max
+
+
+          function createAnArray () {
+               var newArray = [];
+               for ( let i = 0; i < 10; i++) {
+                    newArray[i] = Math.round(Math.random() * (10 - 1) + 1);
+               }
+               console.log(`Current Array, ${newArray}`);
+               return newArray;
+          }
+
+          
+          function arrayWithRange(minRange, maxRange, array) {
+               var rangedArray = [];
+               for ( let i = minRange; i <= maxRange; i++) {
+                    rangedArray.push(array[i])
+               }
+               return console.log(`New Ranged Array : ${rangedArray}`);
+          }
+
+          // arrayWithRange( 
+          //                parseInt(prompt(`Inserisci un indice di range minimo...`)),
+          //                parseInt(prompt(`Inserisci un indice di range massimo...`)),
+          //                createAnArray());
+
+
+
+                              //Versione usando i valori dell'array come range min e max
+
+
+          function createAnArray2 () {
+               var newArray = [];
+               for ( let i = 0; i < 10; i++) {
+                    newArray[i] = Math.round(Math.random() * (10 - 1) + 1);
+               }
+               console.log(`Current Array, ${newArray}`);
+               return newArray;
+          }
+
+          function arrayWithRange2(minRange, maxRange, array) {
+               var rangedArray = [];
+               for ( let i = 0; i < array.length; i++) {
+                    if ( array[i] >= minRange && array[i] <= maxRange) {
+                    rangedArray.push(array[i])
+               }
+          }
+          return console.log(`New Ranged Array : ${rangedArray}`);
+     }
+
+          // arrayWithRange2( 
+          //                parseInt(prompt(`Inserisci un valore di range minimo...`)),
+          //                parseInt(prompt(`Inserisci un valore di range massimo...`)),
+          //                createAnArray2());
+          
+
+
+
+                                   // Crea 5 oggetti che rappresentano una zucchina.
+                                   // Dividi in due array separati le zucchine che misurano
+                                   // meno o più di 15cm.
+                                   // Infine stampa separatamente quanto pesano i due gruppi
+                                   // di zucchine
+
+                                        
+          function zucchine() {
+               var arrayplus15 = [];
+               var arraymin15 = [];
+               var sumForPlus= 0;
+               var sumForMin = 0;
+               var zucchine = [
+
+                    {'variety' : 'Judy','weight' : 20,'lengths' : 10},
+                    {'variety' : 'Judy','weight' : 20,'lengths' : 20},
+                    {'variety' : 'Judy','weight' : 20,'lengths' : 30},
+                    {'variety' : 'Judy','weight' : 20,'lengths' : 10},
+                    {'variety' : 'Judy','weight' : 20,'lengths' : 5},
+               ]
+
+               for ( let i = 0; i < zucchine.length; i++ ) {
+                    if ( zucchine[i].lengths >= 15 ) {
+                         arrayplus15.push(zucchine[i]);
+                         sumForPlus += zucchine[i].weight;
+                    } else {
+                         arraymin15.push(zucchine[i]);
+                         sumForMin += zucchine[i].weight;
+                    }
+               }
+               console.log(arrayplus15);
+               console.log(arraymin15);
+               console.log(sumForPlus);
+               console.log(sumForMin); 
+          }
+
+          // zucchine();
+
+
+                              
+                              //           Scrivi una funzione che restituisca una stringa al contrario
+
+          function string() {
+               var string = "olga";
+               var splitted = string.split('').reverse().join('');
+               return console.log(splitted);                    
+          }
+
+          // string();
+          
+
+
+                                        //           Scrivi una funzione che fonda due array (aventi lo stesso
+                                        // numero di elementi) prendendo alternativamente gli
+                                        // elementi da uno e dall'altro
+                                        // es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+
+          function arrayfuse() {
+               var array1 = ["a","b","c"];
+               var array2 = [1,2,3];
+               var finalArray = [];
+               for ( let i = 0; i < array1.length; i++) {
+                    finalArray.push(array1[i], array2[i]);
+               }
+               return console.log(finalArray);
+          }
+
+          // arrayfuse();
+     
+    </script>
+  </body>
+</html>
